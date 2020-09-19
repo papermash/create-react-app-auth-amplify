@@ -1,0 +1,25 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "cognitocf0c6096",
+  "functionName": "cognitocf0c6096CustomMessage",
+  "resourceName": "cognitocf0c6096CustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "/usr/local/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/triggers/CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "roleName": "cognitocf0c6096CustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "guid.papermash.io",
+  "EMAILSUBJECT": "Test custom account confirmation",
+  "EMAILMESSAGE": "test ",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}

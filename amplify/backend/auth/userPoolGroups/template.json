@@ -1,0 +1,55 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Parameters": {
+        "authcognitocf0c6096UserPoolId": {
+            "Type": "String",
+            "Default": "authcognitocf0c6096UserPoolId"
+        },
+        
+        "authcognitocf0c6096AppClientID": {
+            "Type": "String",
+            "Default": "authcognitocf0c6096AppClientID"
+        },
+        "authcognitocf0c6096AppClientIDWeb": {
+            "Type": "String",
+            "Default": "authcognitocf0c6096AppClientIDWeb"
+        },
+        "AuthRoleArn": {
+            "Type": "String"
+        },
+        "UnauthRoleArn": {
+            "Type": "String"
+        },
+        "env": {
+            "Type": "String"
+        }
+    },
+    "Conditions": {
+        "ShouldNotCreateEnvResources": {
+            "Fn::Equals": [
+                {
+                    "Ref": "env"
+                },
+                "NONE"
+            ]
+        }
+    },
+    "Resources": {
+    
+        "papermashUserPoolGroup": {
+          "Type" : "AWS::Cognito::UserPoolGroup",
+          "Properties" : {
+              "GroupName" : "papermashUserPool",
+              "Precedence" : 1,
+              
+              "UserPoolId" : {
+                "Ref": "authcognitocf0c6096UserPoolId"
+              } 
+            }
+        },
+        
+    
+    
+    },
+    
+}
